@@ -9,6 +9,12 @@ import $ from 'jquery'
 // 引入bootstrap
 import './assets/css/bootstrap.min.css'
 import './assets/js/bootstrap.min'
+// 引入配置文件
+import Config from './config/config.js'
+// 引入axios
+import axios from 'axios'
+axios.defaults.baseURL = Config.BASE_API;
+Vue.prototype.axios = axios;
 
 Vue.config.productionTip = false
 
